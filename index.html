@@ -6,6 +6,7 @@
 <title>IBDA Smart Business | מערכת ניהול לעסק עם סריקת מסמכים ב-AI</title>
 <meta name="description" content="כספים, צ׳קים, נוכחות, מלאי ומסמכים באותה מערכת, עם סריקת מסמכים ב-AI ויועץ פיננסי חכם. ₪119 + מע״מ לחודש. אפשר לשלם ולהתחיל, או להשאיר פרטים.">
 <meta name="theme-color" content="#0F2742">
+<script>document.documentElement.className+=' js'</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://ibdaapp2020-stack.github.io/ibda-landing-F/">
@@ -55,13 +56,97 @@ input[aria-invalid="true"]{border-color:#B42318!important}
 .beam{position:absolute;left:0;right:0;top:5%;height:3px;background:#E3B23C;box-shadow:0 0 18px 6px rgba(227,178,60,.5);animation:beam 3.4s ease-in-out infinite}
 .fillbar{display:block;height:8px;width:var(--w);border-radius:4px;background:#8FB0D9;animation:fillbar 7s ease-in-out infinite both}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.beam{animation:none!important;top:42%!important}.fillbar{animation:none!important}.chip,.btn{transition:none}.btn:hover{transform:none}.led{animation:none}}
+
+/* ---------------- phone layer (<= 900px). Structural rules are gated by html.js ---------------- */
+.acch-h,.mhd,.mbar,.msheet,.m-copy{display:none}
+.accp{display:contents}
+html.nsl{overflow:hidden}
+@keyframes accin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes sheetin{from{transform:translateY(36px);opacity:.4}to{transform:none;opacity:1}}
+@media (max-width:900px){
+  html.js{overflow-anchor:none}
+  section[id]>.wrap{padding-top:44px!important;padding-bottom:48px!important;gap:28px!important}
+  .hero>.wrap{padding-top:26px!important;gap:16px!important}
+  .hero p{font-size:17px!important}
+  .hero .hcta{width:100%;flex-direction:column;flex-wrap:nowrap;margin-top:2px!important}
+  .hero .hcta .btn{width:100%;justify-content:center}
+  .hchips{display:grid!important;grid-template-columns:1fr 1fr;gap:10px!important;width:100%}
+  .hchips .chip{justify-content:center;text-align:center;min-height:52px;padding:8px 12px!important;border-radius:14px!important;line-height:1.3;box-sizing:border-box}
+  .hchips .hc-full{grid-column:1/-1}
+  .fgrid{gap:10px!important}
+  .fcard{padding:14px 16px!important;gap:8px!important;border-radius:16px!important}
+  .fcard .ft{font-size:22px!important}
+
+  html.js .tstrip{display:none}
+  html.js .hd-nav,html.js .hd-pay{display:none!important}
+  html.js .mhd{display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 16px;border-radius:12px;border:1.5px solid #D8E1EC;background:#FFFFFF;color:#0F2742;font:inherit;font-size:15px;font-weight:500;cursor:pointer}
+  header>.wrap{padding-top:8px!important;padding-bottom:8px!important}
+
+  html.js #modules>.wrap{gap:20px!important}
+  html.js .chipnav{display:none!important}
+  html.js .d-copy{display:none}
+  html.js .m-copy{display:block}
+  html.js .acc{gap:10px!important;max-width:720px}
+  html.js .tm{display:block!important;direction:rtl!important;background:#FFFFFF;border:1px solid #D8E1EC;border-radius:16px;scroll-margin-top:12px;transition:border-color .15s}
+  html.js .tm.open{border-color:#0A6F60}
+  html.js .acch-h{display:block;margin:0;font:inherit}
+  html.js .acch{display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;min-height:64px;padding:10px 14px;margin:0;border:0;border-radius:15px;background:transparent;color:#0F2742;font:inherit;text-align:start;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  html.js .acch:focus-visible{outline-offset:-3px}
+  html.js .acc-ic{width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center}
+  html.js .acc-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+  html.js .acc-t{font-size:18px;font-weight:700;line-height:1.25}
+  html.js .acc-s{font-size:13px;color:#546A84}
+  html.js .acc-ch{flex:none;color:#0A6F60;transition:transform .2s}
+  html.js .tm.open .acch{background:#F2FAF8;border-radius:15px 15px 0 0}
+  html.js .tm.open .acc-ch{transform:rotate(180deg)}
+  html.js .accp{display:none}
+  html.js .tm.open .accp{display:block;padding:12px 14px 16px;animation:accin .2s ease-out}
+  html.js .tm .tmi{display:block!important;padding:0 0 12px!important}
+  html.js .tm .tmi figure{box-shadow:none!important;border-radius:12px!important}
+  html.js .tm .tmt{padding:0!important;gap:8px!important}
+  html.js .tm .tmt .tml,html.js .tm .tmt h3{display:none!important}
+  html.js .tm .tmt p{max-width:none!important;font-size:16px!important}
+
+  .mbar,.msheet{font-family:'Rubik','Segoe UI',Arial,sans-serif;line-height:1.5;color:#0F2742}
+  html.js .tlend{display:none!important}
+  html.js .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:150;align-items:center;gap:8px;box-sizing:border-box;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #D8E1EC;box-shadow:0 -6px 24px rgba(15,39,66,.10);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+  html.js .mbar.on{transform:none;visibility:visible;transition:transform .25s ease}
+  .mb-menu{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;border:1.5px solid #C5D2E2;background:#FFFFFF;color:#0F2742;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+  .mb-pay{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;min-height:48px;box-sizing:border-box;padding:0 8px;border-radius:12px;background:#0A6F60;color:#FFFFFF;font-weight:600;font-size:16px;line-height:1.2;text-align:center}
+  .mb-wa{flex:none;width:48px;min-height:48px;display:inline-grid;place-items:center;border-radius:12px;background:#25D366;color:#06281A}
+  html.js footer{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+
+  html.js .msheet{display:block;position:fixed;left:0;right:0;top:0;bottom:0;z-index:300}
+  .msheet-bg{position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(15,39,66,.55)}
+  .msheet-p{position:absolute;left:0;right:0;bottom:0;max-height:90vh;max-height:90dvh;overflow-y:auto;box-sizing:border-box;background:#FFFFFF;border-radius:22px 22px 0 0;padding:8px 20px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -12px 40px rgba(15,39,66,.28);animation:sheetin .22s ease-out;outline:none}
+  .msheet-grip{width:44px;height:5px;border-radius:3px;background:#D8E1EC;margin:4px auto 8px}
+  .msheet-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:2px}
+  .msheet-t{font-size:20px;font-weight:700}
+  .msheet-x{width:44px;height:44px;border:0;border-radius:12px;background:#F2F5F9;color:#0F2742;display:grid;place-items:center;cursor:pointer}
+  .msi{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:0 4px;border-bottom:1px solid #E6ECF3;font-size:18px;font-weight:500;color:#0F2742}
+  .msi svg{flex:none;color:#0A6F60}
+  .msheet-act{display:flex;gap:10px;margin-top:16px}
+  .mact{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;box-sizing:border-box;border-radius:14px;font-weight:600;font-size:16px}
+  .mact-call{border:1.5px solid #0F2742;color:#0F2742;background:#FFFFFF}
+  .mact-wa{background:#25D366;color:#06281A}
+}
+@media (max-width:360px){
+  .mb-menu span{display:none}
+  .mb-menu{padding:0 12px}
+  .mb-pay{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  .accp,.msheet-p{animation:none!important}
+  .mbar{transition:none!important}
+  .acc-ch{transition:none!important}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">דלגו לתוכן הראשי</a>
 <div id="top" dir="rtl" style="background:#F2F5F9;color:#0F2742;font-family:'Rubik','Segoe UI',Arial,sans-serif;line-height:1.5;overflow-x:hidden">
 
-<div class="dk" style="background:#0F2742">
+<div class="dk tstrip" style="background:#0F2742">
   <div class="wrap" style="max-width:1240px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px;font-size:14px;color:#DCE6F3">
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0 26px">
       <a class="lnk" href="tel:+972528871655" style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap"><span style="color:#8FD6C8;display:inline-flex"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg></span><span dir="ltr" style="unicode-bidi:isolate">052-887-1655</span></a>
@@ -75,19 +160,20 @@ input[aria-invalid="true"]{border-color:#B42318!important}
 <header style="background:#FFFFFF;border-bottom:1px solid #D8E1EC">
   <div class="wrap" style="max-width:1240px;margin:0 auto;padding:12px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 28px">
     <a href="#top" style="display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:22px;letter-spacing:.2em">IBDA</a>
-    <nav aria-label="ניווט ראשי" style="display:flex;flex-wrap:wrap;gap:0 28px;font-size:16px;color:#34495F">
+    <button type="button" class="mopen mhd" aria-haspopup="dialog" aria-controls="msheet" aria-expanded="false"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>תפריט</span></button>
+    <nav class="hd-nav" aria-label="ניווט ראשי" style="display:flex;flex-wrap:wrap;gap:0 28px;font-size:16px;color:#34495F">
       <a class="nv" href="#modules">המערכת</a>
       <a class="nv" href="#scan">סריקת AI</a>
       <a class="nv" href="#ai">IBDA AI</a>
       <a class="nv" href="#custom">התאמה לעסק</a>
       <a class="nv" href="#start">השארת פרטים</a>
     </nav>
-    <a class="btn" href="https://pay.grow.link/MTA1Mjgy~f30edfb6c58a9d720e6e258e96ad1115-NDMzODE4Mg" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 22px;border-radius:12px;background:#0A6F60;color:#fff;font-weight:600;font-size:15px">לתשלום וקבלת המערכת</a>
+    <a class="btn hd-pay" href="https://pay.grow.link/MTA1Mjgy~f30edfb6c58a9d720e6e258e96ad1115-NDMzODE4Mg" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 22px;border-radius:12px;background:#0A6F60;color:#fff;font-weight:600;font-size:15px">לתשלום וקבלת המערכת</a>
   </div>
 </header>
 
 <main id="main">
-<section style="background:#F2F5F9">
+<section class="hero" style="background:#F2F5F9">
   <div class="wrap" style="max-width:1240px;margin:0 auto;padding:72px 32px 0;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center">
     <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:#E3F3EF;color:#0A6F60;font-weight:500;font-size:15px">
       <span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#0A6F60"></span>
@@ -95,22 +181,22 @@ input[aria-invalid="true"]{border-color:#B42318!important}
     </span>
     <h1 style="margin:0;font-weight:700;font-size:clamp(42px,6.2vw,84px);line-height:1.04;letter-spacing:-.02em;text-wrap:balance">כל העסק במסך אחד.</h1>
     <p style="margin:0;max-width:680px;font-size:20px;color:#34495F;text-wrap:pretty">כספים, צ׳קים, נוכחות, מלאי, מסמכים וציוד באותה מערכת. ומה שדורש טיפול היום, מחר או השבוע, מופיע לכם בראש המסך.</p>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:6px">
+    <div id="hero-cta" class="hcta" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:6px">
       <a class="btn" href="https://pay.grow.link/MTA1Mjgy~f30edfb6c58a9d720e6e258e96ad1115-NDMzODE4Mg" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:52px;box-sizing:border-box;padding:0 28px;border-radius:14px;background:#0A6F60;color:#fff;font-weight:600;font-size:17px">לתשלום וקבלת המערכת
         <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
       </a>
       <a class="btn" href="#start" style="display:inline-flex;align-items:center;min-height:52px;box-sizing:border-box;padding:0 28px;border-radius:14px;border:1.5px solid #0F2742;color:#0F2742;font-weight:500;font-size:17px">השארת פרטים</a>
     </div>
     <div style="font-size:15px;color:#546A84"><span dir="ltr" style="unicode-bidi:isolate">IBDA Smart Business</span> · <span>₪119 + מע״מ לחודש</span></div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
-      <a class="chip" href="#ai" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 10px 0 18px;border-radius:999px;border:1px solid #D8E1EC;background:#FFFFFF;font-size:15px;color:#34495F">
+    <div class="hchips" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
+      <a class="chip hc-full" href="#ai" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 10px 0 18px;border-radius:999px;border:1px solid #D8E1EC;background:#FFFFFF;font-size:15px;color:#34495F">
         <span style="padding:3px 10px;border-radius:999px;background:#0E2142;color:#E3B23C;font-weight:600;font-size:13px">IBDA AI</span>
         יועץ פיננסי חכם, בתוך המערכת
         <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
       </a>
       <a class="chip" href="#scan" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 16px;border-radius:999px;border:1px solid #EBD9A0;background:#FBF1D6;font-size:15px;color:#7A5600"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M7 12h10"></path></svg>סריקת מסמך AI, בלי להקליד</a>
       <a class="chip" href="#custom" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 16px;border-radius:999px;border:1px solid #D8E1EC;background:#FFFFFF;font-size:15px;color:#34495F"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>התאמה לעסק</a>
-      <a class="chip" href="#s13" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 16px;border-radius:999px;border:1px solid #D8E1EC;background:#FFFFFF;font-size:15px;color:#34495F"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7 2.8v5.3c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6zM9 12l2.2 2.2L15.5 10"></path></svg>הרשאות לשותפים, מנהלים ועובדים</a>
+      <a class="chip hc-full" href="#s13" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 16px;border-radius:999px;border:1px solid #D8E1EC;background:#FFFFFF;font-size:15px;color:#34495F"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7 2.8v5.3c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6zM9 12l2.2 2.2L15.5 10"></path></svg>הרשאות לשותפים, מנהלים ועובדים</a>
     </div>
   </div>
 </section>
@@ -124,10 +210,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
         13 מסכים אמיתיים מהמערכת
       </span>
       <h2 style="margin:0;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.12;text-wrap:balance">המערכת, מסך אחרי מסך</h2>
-      <p style="margin:0;max-width:620px;font-size:18px;color:#546A84;text-wrap:pretty">הסדר זהה לסדר המודולים במסך הבית. לוחצים על מספר וקופצים ישר למסך.</p>
+      <p class="d-copy" style="margin:0;max-width:620px;font-size:18px;color:#546A84;text-wrap:pretty">הסדר זהה לסדר המודולים במסך הבית. לוחצים על מספר וקופצים ישר למסך.</p>
+      <p class="m-copy" style="margin:0;max-width:620px;font-size:18px;color:#546A84;text-wrap:pretty">לוחצים על שורה כדי לראות את המסך האמיתי ואת ההסבר.</p>
     </div>
 
-    <nav aria-label="מסכי המערכת" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
+    <nav class="chipnav" aria-label="מסכי המערכת" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
       
         <a class="chip" href="#s01" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 16px 0 8px;border-radius:999px;border:1.5px solid #D8E1EC;background:#FFFFFF;color:#0F2742;font-size:15px;font-weight:500">
           <span style="width:28px;height:28px;flex:none;border-radius:50%;background:#E3F3EF;color:#0A5C50;display:grid;place-items:center;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums">01</span>
@@ -196,10 +283,12 @@ input[aria-invalid="true"]{border-color:#B42318!important}
       
     </nav>
 
-    <div style="width:100%;max-width:1100px;margin:0 auto;display:flex;flex-direction:column">
+    <div class="acc" style="width:100%;max-width:1100px;margin:0 auto;display:flex;flex-direction:column">
 
       
         <div id="s01" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s01" dir="rtl" aria-expanded="false" aria-controls="p-s01"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8.5a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"></path></svg></span><span class="acc-tx"><span class="acc-t">לוח בקרה</span><span class="acc-s" aria-hidden="true"><bdi>01</bdi> · מסך הבית</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s01">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -222,7 +311,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8.5a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"></path></svg>
               </span>
@@ -233,7 +322,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
                 <span>מסך הבית</span>
               </span>
             </div>
-            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">הכל במבט אחד</h3>
+            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">לוח בקרה</h3>
             <p style="margin:0;max-width:440px;font-size:18px;line-height:1.55;color:#34495F;text-wrap:pretty">כל המודולים במקום אחד, ולוח כיבוי שריפות: מה שנופל היום, מחר ובשבוע הקרוב.</p>
             <a class="lnk" href="assets/screens/01-home.webp" target="_blank" rel="noopener" style="align-self:flex-start;gap:8px;font-size:16px;font-weight:500;color:#0A6F60">
               פתיחה בגודל מלא
@@ -242,8 +331,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s02" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s02" dir="rtl" aria-expanded="false" aria-controls="p-s02"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="acc-tx"><span class="acc-t">הצעת מחיר</span><span class="acc-s" aria-hidden="true"><bdi>02</bdi> · רישום</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s02">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -266,7 +358,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
               </span>
@@ -286,8 +378,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s03" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s03" dir="rtl" aria-expanded="false" aria-controls="p-s03"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 7h13A2.5 2.5 0 0 1 21 9.5v7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5v-7A2.5 2.5 0 0 1 5.5 7zM16 13h2.2M5.5 7l9.5-3"></path></svg></span><span class="acc-tx"><span class="acc-t">תחזית תזרים והתראות</span><span class="acc-s" aria-hidden="true"><bdi>03</bdi> · תזרים מזומנים</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s03">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -310,7 +405,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 7h13A2.5 2.5 0 0 1 21 9.5v7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5v-7A2.5 2.5 0 0 1 5.5 7zM16 13h2.2M5.5 7l9.5-3"></path></svg>
               </span>
@@ -321,7 +416,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
                 <span>תזרים מזומנים</span>
               </span>
             </div>
-            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">תזרים עם התראה על חריגה</h3>
+            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">תחזית תזרים והתראות</h3>
             <p style="margin:0;max-width:440px;font-size:18px;line-height:1.55;color:#34495F;text-wrap:pretty">בוחרים טווח ורואים הכנסות, הוצאות ויתרה צפויה. חריגה צפויה מסומנת באדום, לפני שהיא קורית.</p>
             <a class="lnk" href="assets/screens/03-cashflow.webp" target="_blank" rel="noopener" style="align-self:flex-start;gap:8px;font-size:16px;font-weight:500;color:#0A6F60">
               פתיחה בגודל מלא
@@ -330,8 +425,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s04" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s04" dir="rtl" aria-expanded="false" aria-controls="p-s04"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5l9-5.5 9 5.5M5.5 11v6M10 11v6M14 11v6M18.5 11v6M3.5 20h17"></path></svg></span><span class="acc-tx"><span class="acc-t">צ׳קים לספקים</span><span class="acc-s" aria-hidden="true"><bdi>04</bdi> · צ׳קים</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s04">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -354,7 +452,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5l9-5.5 9 5.5M5.5 11v6M10 11v6M14 11v6M18.5 11v6M3.5 20h17"></path></svg>
               </span>
@@ -374,8 +472,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s05" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s05" dir="rtl" aria-expanded="false" aria-controls="p-s05"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10.3 5.3 7.8 4.8 4 4.8v13.6c3.8 0 6.3.5 8 1.7 1.7-1.2 4.2-1.7 8-1.7V4.8c-3.8 0-6.3.5-8 1.7zM12 6.5v13.6"></path></svg></span><span class="acc-tx"><span class="acc-t">כרטסות מאוחדות</span><span class="acc-s" aria-hidden="true"><bdi>05</bdi> · כרטסות</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s05">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -398,7 +499,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10.3 5.3 7.8 4.8 4 4.8v13.6c3.8 0 6.3.5 8 1.7 1.7-1.2 4.2-1.7 8-1.7V4.8c-3.8 0-6.3.5-8 1.7zM12 6.5v13.6"></path></svg>
               </span>
@@ -418,8 +519,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s06" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s06" dir="rtl" aria-expanded="false" aria-controls="p-s06"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3.2 3.2 0 1 0 0-6.4A3.2 3.2 0 0 0 9 11zM3.5 19.5c.5-3.3 2.8-5.2 5.5-5.2s5 1.9 5.5 5.2M16.5 5.2a3 3 0 0 1 0 5.6M18 14.6c1.7.7 2.8 2.3 3.2 4.6"></path></svg></span><span class="acc-tx"><span class="acc-t">אנשי קשר</span><span class="acc-s" aria-hidden="true"><bdi>06</bdi> · אנשי קשר</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s06">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -442,7 +546,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3.2 3.2 0 1 0 0-6.4A3.2 3.2 0 0 0 9 11zM3.5 19.5c.5-3.3 2.8-5.2 5.5-5.2s5 1.9 5.5 5.2M16.5 5.2a3 3 0 0 1 0 5.6M18 14.6c1.7.7 2.8 2.3 3.2 4.6"></path></svg>
               </span>
@@ -462,8 +566,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s07" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s07" dir="rtl" aria-expanded="false" aria-controls="p-s07"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A1.5 1.5 0 0 1 6.5 4h11A1.5 1.5 0 0 1 19 5.5V14l-5 6H6.5A1.5 1.5 0 0 1 5 18.5zM14 20v-4.5a1 1 0 0 1 1-1h4"></path></svg></span><span class="acc-tx"><span class="acc-t">פתקים</span><span class="acc-s" aria-hidden="true"><bdi>07</bdi> · פתקים</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s07">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -486,7 +593,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A1.5 1.5 0 0 1 6.5 4h11A1.5 1.5 0 0 1 19 5.5V14l-5 6H6.5A1.5 1.5 0 0 1 5 18.5zM14 20v-4.5a1 1 0 0 1 1-1h4"></path></svg>
               </span>
@@ -506,8 +613,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s08" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s08" dir="rtl" aria-expanded="false" aria-controls="p-s08"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"></path></svg></span><span class="acc-tx"><span class="acc-t">דוחות</span><span class="acc-s" aria-hidden="true"><bdi>08</bdi> · דוחות</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s08">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -530,7 +640,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"></path></svg>
               </span>
@@ -550,8 +660,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s09" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s09" dir="rtl" aria-expanded="false" aria-controls="p-s09"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5zM4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"></path></svg></span><span class="acc-tx"><span class="acc-t">נוכחות עובדים</span><span class="acc-s" aria-hidden="true"><bdi>09</bdi> · נוכחות</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s09">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -574,7 +687,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5zM4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"></path></svg>
               </span>
@@ -594,8 +707,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s10" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s10" dir="rtl" aria-expanded="false" aria-controls="p-s10"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H16M9 3.5h6V7H9zM8.5 12h7M8.5 16h7"></path></svg></span><span class="acc-tx"><span class="acc-t">יומן עבודה</span><span class="acc-s" aria-hidden="true"><bdi>10</bdi> · יומן עבודה</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s10">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -618,7 +734,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H16M9 3.5h6V7H9zM8.5 12h7M8.5 16h7"></path></svg>
               </span>
@@ -629,7 +745,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
                 <span>יומן עבודה</span>
               </span>
             </div>
-            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">יומן עבודה לפרויקטים</h3>
+            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">יומן עבודה</h3>
             <p style="margin:0;max-width:440px;font-size:18px;line-height:1.55;color:#34495F;text-wrap:pretty">לכל פרויקט: יומנים, שעות עבודה, שעות כלים ועובדים, ומה שמחכה לבדיקה.</p>
             <a class="lnk" href="assets/screens/10-journal.webp" target="_blank" rel="noopener" style="align-self:flex-start;gap:8px;font-size:16px;font-weight:500;color:#0A6F60">
               פתיחה בגודל מלא
@@ -638,8 +754,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s11" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s11" dir="rtl" aria-expanded="false" aria-controls="p-s11"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10A1.5 1.5 0 0 1 18.5 5v14a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5zM8.5 8h7M9 12.5h.01M12 12.5h.01M15 12.5h.01M9 16.5h.01M12 16.5h.01M15 16.5h.01"></path></svg></span><span class="acc-tx"><span class="acc-t">שליחה לרו״ח</span><span class="acc-s" aria-hidden="true"><bdi>11</bdi> · רו״ח ומיסים</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s11">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -662,7 +781,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10A1.5 1.5 0 0 1 18.5 5v14a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5zM8.5 8h7M9 12.5h.01M12 12.5h.01M15 12.5h.01M9 16.5h.01M12 16.5h.01M15 16.5h.01"></path></svg>
               </span>
@@ -673,7 +792,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
                 <span>רו״ח ומיסים</span>
               </span>
             </div>
-            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">שליחה לרואה חשבון</h3>
+            <h3 style="margin:0;font-size:28px;line-height:1.2;font-weight:700">שליחה לרו״ח</h3>
             <p style="margin:0;max-width:440px;font-size:18px;line-height:1.55;color:#34495F;text-wrap:pretty">מסמכים עם קובץ מצורף במקום אחד: מסננים, ושולחים לרו״ח במייל או ב-WhatsApp, או מורידים.</p>
             <a class="lnk" href="assets/screens/11-accountant.webp" target="_blank" rel="noopener" style="align-self:flex-start;gap:8px;font-size:16px;font-weight:500;color:#0A6F60">
               פתיחה בגודל מלא
@@ -682,8 +801,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s12" class="tm" dir="ltr" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s12" dir="rtl" aria-expanded="false" aria-controls="p-s12"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h11v9.5H3zM14 9.5h3.6l3 3.2V16H14M7.5 18.8a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zM17 18.8a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z"></path></svg></span><span class="acc-tx"><span class="acc-t">רכבים וציוד</span><span class="acc-s" aria-hidden="true"><bdi>12</bdi> · כלי צמ״ה / ציוד</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s12">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -706,7 +828,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h11v9.5H3zM14 9.5h3.6l3 3.2V16H14M7.5 18.8a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zM17 18.8a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z"></path></svg>
               </span>
@@ -726,8 +848,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
         <div id="s13" class="tm" dir="rtl" style="display:flex;align-items:stretch">
+          <h3 class="acch-h"><button type="button" class="acch" id="h-s13" dir="rtl" aria-expanded="false" aria-controls="p-s13"><span class="acc-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7 2.8v5.3c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6zM9 12l2.2 2.2L15.5 10"></path></svg></span><span class="acc-tx"><span class="acc-t">ניהול הרשאות</span><span class="acc-s" aria-hidden="true"><bdi>13</bdi> · הרשאות</span></span><svg class="ic acc-ch" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></h3>
+          <div class="accp" id="p-s13">
 
           <div class="tmi" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;align-items:center">
             <figure style="margin:0;width:100%;border-radius:16px;overflow:hidden;background:#FFFFFF;border:1px solid #D8E1EC;box-shadow:0 20px 48px rgba(15,39,66,.11)">
@@ -750,7 +875,7 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
           <div class="tmt" dir="rtl" style="flex:1 1 0;min-width:0;padding:14px 0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div class="tml" style="display:flex;align-items:center;gap:10px">
               <span style="width:40px;height:40px;flex:none;border-radius:12px;background:#E3F3EF;color:#0A6F60;display:grid;place-items:center">
                 <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7 2.8v5.3c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6zM9 12l2.2 2.2L15.5 10"></path></svg>
               </span>
@@ -770,9 +895,10 @@ input[aria-invalid="true"]{border-color:#B42318!important}
           </div>
 
         </div>
+        </div>
       
 
-      <div style="display:flex;justify-content:center">
+      <div class="tlend" style="display:flex;justify-content:center">
         <div aria-hidden="true" style="flex:0 0 88px;position:relative;height:64px">
           <span style="position:absolute;top:0;height:50%;left:50%;width:2px;margin-left:-1px;background:#B5D6CE"></span>
           <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;box-sizing:border-box;border-radius:50%;background:#FFFFFF;border:2px solid #0A6F60;color:#0A6F60;display:grid;place-items:center;box-shadow:0 0 0 6px #F2F5F9">
@@ -819,11 +945,11 @@ input[aria-invalid="true"]{border-color:#B42318!important}
       <h2 style="margin:0;font-weight:700;font-size:clamp(28px,3.4vw,42px);line-height:1.15;text-wrap:balance">כיבוי שריפות</h2>
       <p style="margin:0;font-size:18px;color:#34495F;text-wrap:pretty">במסך הבית רואים מה דורש טיפול היום, מחר ובשבוע הקרוב: פירעונות, גבייה, מסמכים, נוכחות ויומן עבודה. וכשהכל מסודר, המערכת אומרת את זה.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
-      <div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
+    <div class="fgrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
+      <div class="fcard" style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
           <div>
-            <div style="font-weight:700;font-size:28px;line-height:1.15">היום</div>
+            <div class="ft" style="font-weight:700;font-size:28px;line-height:1.15">היום</div>
             <div style="font-size:15px;color:#546A84">שריפות שצריך לכבות עכשיו</div>
           </div>
           <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:#E3F3EF;color:#0A6F60;font-weight:500;font-size:14px">
@@ -833,10 +959,10 @@ input[aria-invalid="true"]{border-color:#B42318!important}
         </div>
         <div style="font-weight:600;font-size:17px;color:#0A6F60">אין שריפות — הכל תחת שליטה</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
+      <div class="fcard" style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
           <div>
-            <div style="font-weight:700;font-size:28px;line-height:1.15">מחר</div>
+            <div class="ft" style="font-weight:700;font-size:28px;line-height:1.15">מחר</div>
             <div style="font-size:15px;color:#546A84">מה שנופל מחר</div>
           </div>
           <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:#E3F3EF;color:#0A6F60;font-weight:500;font-size:14px">
@@ -846,10 +972,10 @@ input[aria-invalid="true"]{border-color:#B42318!important}
         </div>
         <div style="font-weight:600;font-size:17px;color:#0A6F60">אין שריפות — הכל תחת שליטה</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
+      <div class="fcard" style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #CBE6DF;border-radius:20px;padding:24px">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
           <div>
-            <div style="font-weight:700;font-size:28px;line-height:1.15">7 ימים הקרובים</div>
+            <div class="ft" style="font-weight:700;font-size:28px;line-height:1.15">7 ימים הקרובים</div>
             <div style="font-size:15px;color:#546A84">מה שמתקרב השבוע</div>
           </div>
           <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:#E3F3EF;color:#0A6F60;font-weight:500;font-size:14px">
@@ -1207,6 +1333,33 @@ input[aria-invalid="true"]{border-color:#B42318!important}
 </footer>
 
 </div>
+<div id="msheet" class="msheet" hidden>
+  <div class="msheet-bg" data-close></div>
+  <div class="msheet-p" role="dialog" aria-modal="true" aria-labelledby="msheet-t" tabindex="-1">
+    <div class="msheet-grip" aria-hidden="true"></div>
+    <div class="msheet-hd">
+      <div id="msheet-t" class="msheet-t">תפריט</div>
+      <button type="button" class="msheet-x" data-close aria-label="סגירת התפריט"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+    <nav aria-label="סעיפי הדף">
+      <a class="msi" href="#modules"><span>המערכת, מסך אחרי מסך</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      <a class="msi" href="#fires"><span>כיבוי שריפות</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      <a class="msi" href="#scan"><span>סריקת מסמכים ב-AI</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      <a class="msi" href="#ai"><span>IBDA AI, יועץ פיננסי</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      <a class="msi" href="#custom"><span>התאמה לעסק</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      <a class="msi" href="#start"><span>תשלום והשארת פרטים</span><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+    </nav>
+    <div class="msheet-act">
+      <a class="btn mact mact-call" href="tel:+972528871655"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg><span dir="ltr" style="unicode-bidi:isolate">052-887-1655</span></a>
+      <a class="btn mact mact-wa" href="https://wa.me/972528871655?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20IBDA%20Smart%20Business." target="_blank" rel="noopener"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg>וואטסאפ</a>
+    </div>
+  </div>
+</div>
+<nav id="mbar" class="mbar" aria-label="פעולות מהירות">
+  <button type="button" class="mopen mb-menu" aria-haspopup="dialog" aria-controls="msheet" aria-expanded="false"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>תפריט</span></button>
+  <a class="btn mb-pay" href="https://pay.grow.link/MTA1Mjgy~f30edfb6c58a9d720e6e258e96ad1115-NDMzODE4Mg" target="_blank" rel="noopener">לתשלום וקבלת המערכת</a>
+  <a class="btn mb-wa" href="https://wa.me/972528871655?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20IBDA%20Smart%20Business." target="_blank" rel="noopener" aria-label="שלחו הודעה בוואטסאפ"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path></svg></a>
+</nav>
 <script>
 (function () {
   var WA = '972528871655';
@@ -1258,6 +1411,132 @@ input[aria-invalid="true"]{border-color:#B42318!important}
   fName.addEventListener('input', function () { if (fName.value.trim().length >= 2) flag(fName, eName, false); });
   fPhone.addEventListener('input', function () { if (phoneOk(fPhone.value)) flag(fPhone, ePhone, false); });
   again.addEventListener('click', function () { show(false); });
+})();
+(function () {
+  var root = document.documentElement;
+  var mq = window.matchMedia('(max-width:900px)');
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.tm'));
+  var TYPING = /^(INPUT|TEXTAREA|SELECT)$/;
+
+  function onChange(list, fn) { if (list.addEventListener) list.addEventListener('change', fn); else list.addListener(fn); }
+  function top() { return window.pageYOffset || root.scrollTop || 0; }
+  function jump(y) {                       // instant scroll, whatever the page-wide smooth setting is
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, y);
+    root.style.scrollBehavior = '';
+  }
+  function glide(el) {
+    var y = Math.max(0, top() + el.getBoundingClientRect().top - 12);
+    try { window.scrollTo({ top: y, behavior: reduce.matches ? 'auto' : 'smooth' }); } catch (e) { window.scrollTo(0, y); }
+  }
+
+  // ---- accordion: one screen open at a time
+  function setRow(row, open) {
+    var btn = row.querySelector('.acch');
+    row.classList.toggle('open', open);
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function openRow(row, forceOpen) {
+    var willOpen = forceOpen ? true : !row.classList.contains('open');
+    var before = row.getBoundingClientRect().top;
+    rows.forEach(function (r) { if (r !== row) setRow(r, false); });
+    setRow(row, willOpen);
+    var after = row.getBoundingClientRect().top;
+    if (after !== before) jump(top() + (after - before));   // rows above collapsed: keep the tapped row under the finger
+    if (willOpen) glide(row);
+  }
+  rows.forEach(function (row) {
+    var btn = row.querySelector('.acch');
+    if (btn) btn.addEventListener('click', function () { openRow(row, false); });
+  });
+  function rowFromHash(h) {
+    if (!/^#s\d\d$/.test(h || '')) return null;
+    var el = document.querySelector(h);
+    return el && el.classList.contains('tm') ? el : null;
+  }
+  document.addEventListener('click', function (e) {
+    if (!mq.matches || !e.target.closest) return;
+    var a = e.target.closest('a[href^="#s"]');
+    var row = a && rowFromHash(a.getAttribute('href'));
+    if (!row) return;
+    e.preventDefault();
+    openRow(row, true);
+  });
+  window.addEventListener('hashchange', function () {
+    var row = mq.matches && rowFromHash(location.hash);
+    if (row) openRow(row, true);
+  });
+  var first = mq.matches && rowFromHash(location.hash);
+  if (first) openRow(first, true);
+
+  // ---- menu sheet
+  var sheet = document.getElementById('msheet');
+  var panel = sheet && sheet.querySelector('.msheet-p');
+  var openers = Array.prototype.slice.call(document.querySelectorAll('.mopen'));
+  var lastOpener = null;
+  function visible(n) { return n.getClientRects().length > 0; }
+  function focusables() {
+    return Array.prototype.slice.call(panel.querySelectorAll('a[href],button:not([disabled])')).filter(visible);
+  }
+  function openSheet(opener) {
+    if (!sheet || !mq.matches) return;
+    lastOpener = opener || null;
+    sheet.hidden = false;
+    root.classList.add('nsl');
+    openers.forEach(function (b) { b.setAttribute('aria-expanded', 'true'); });
+    panel.focus();
+  }
+  function closeSheet(restoreFocus) {
+    if (!sheet || sheet.hidden) return;
+    sheet.hidden = true;
+    root.classList.remove('nsl');
+    openers.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+    if (restoreFocus !== false && lastOpener && visible(lastOpener)) lastOpener.focus({ preventScroll: true });
+  }
+  if (sheet) {
+    openers.forEach(function (b) { b.addEventListener('click', function () { openSheet(b); }); });
+    sheet.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.closest && t.closest('[data-close]')) { closeSheet(true); return; }
+      if (t.closest && t.closest('a')) closeSheet(false);    // the link itself does the navigation
+    });
+    document.addEventListener('keydown', function (e) {
+      if (sheet.hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeSheet(true); return; }
+      if (e.key !== 'Tab') return;
+      var f = focusables();
+      if (!f.length) return;
+      var firstEl = f[0], lastEl = f[f.length - 1], cur = document.activeElement;
+      if (e.shiftKey && (cur === firstEl || cur === panel)) { e.preventDefault(); lastEl.focus(); }
+      else if (!e.shiftKey && cur === lastEl) { e.preventDefault(); firstEl.focus(); }
+    });
+  }
+
+  // ---- bottom bar: appears once the hero buttons are gone, hides while a field is being typed in
+  var bar = document.getElementById('mbar');
+  var hero = document.getElementById('hero-cta');
+  var pastHero = false, typing = false;
+  function updateBar() { if (bar) bar.classList.toggle('on', mq.matches && pastHero && !typing); }
+  if (bar && hero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      var en = entries[entries.length - 1];
+      pastHero = !en.isIntersecting && en.boundingClientRect.top < 0;
+      updateBar();
+    }).observe(hero);
+  } else {
+    pastHero = true;
+    updateBar();
+  }
+  document.addEventListener('focusin', function (e) { if (TYPING.test(e.target.tagName)) { typing = true; updateBar(); } });
+  document.addEventListener('focusout', function () {
+    setTimeout(function () {
+      var a = document.activeElement;
+      typing = !!(a && TYPING.test(a.tagName));
+      updateBar();
+    }, 120);
+  });
+  onChange(mq, function () { if (!mq.matches) closeSheet(false); updateBar(); });
 })();
 </script>
 </body>
